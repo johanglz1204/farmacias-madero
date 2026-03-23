@@ -511,3 +511,68 @@ fetch('assets/products.json')
         }, 800);
     })
     .catch(err => console.error('Error cargando productos:', err));
+
+// ==========================================
+// MOBILE OVERLAY MENU LOGIC (Fahorro Style)
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtns = document.querySelectorAll('.hamburger');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const closeMobileMenu = document.getElementById('closeMobileMenu');
+    const tabMenu = document.getElementById('tabMenu');
+    const tabCuenta = document.getElementById('tabCuenta');
+    const contentMenu = document.getElementById('contentMenu');
+    const contentCuenta = document.getElementById('contentCuenta');
+
+    if (mobileMenuOverlay) {
+        hamburgerBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                mobileMenuOverlay.classList.add('open');
+                document.body.classList.add('menu-open');
+            });
+        });
+
+        if (closeMobileMenu) {
+            closeMobileMenu.addEventListener('click', () => {
+                mobileMenuOverlay.classList.remove('open');
+                document.body.classList.remove('menu-open');
+            });
+        }
+
+        // Tab switching
+        if (tabMenu && tabCuenta) {
+            tabMenu.addEventListener('click', () => {
+                tabMenu.classList.add('active');
+                tabCuenta.classList.remove('active');
+                contentMenu.style.display = 'flex';
+                contentCuenta.style.display = 'none';
+                contentMenu.classList.add('active');
+                contentCuenta.classList.remove('active');
+            });
+
+            tabCuenta.addEventListener('click', () => {
+                tabCuenta.classList.add('active');
+                tabMenu.classList.remove('active');
+                contentCuenta.style.display = 'flex';
+                contentMenu.style.display = 'none';
+                contentCuenta.classList.add('active');
+                contentMenu.classList.remove('active');
+            });
+        }
+
+        // Mobile "Iniciar Sesion" button in overlay
+        const mobileLoginBtnOverlay = document.getElementById('mobileLoginBtnOverlay');
+        if (mobileLoginBtnOverlay) {
+            mobileLoginBtnOverlay.addEventListener('click', (e) => {
+                e.preventDefault();
+                mobileMenuOverlay.classList.remove('open');
+                document.body.classList.remove('menu-open');
+                const modal = document.getElementById('authModal');
+                if (modal) {
+                    modal.classList.add('active');
+                    modal.style.display = 'flex';
+                }
+            });
+        }
+    }
+});

@@ -1837,29 +1837,111 @@ a:focus-visible {
   .section-wrapper { padding-top: 10.5rem !important; } /* Adjust for taller stacked header */
   
 
-  /* Mobile Menu Fixes */
-  .header-bottom {
-    max-height: calc(100vh - 120px) !important; 
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
-
   .nav-cat-dropdown {
-    width: 100% !important;
-    position: relative !important;
-    top: 0 !important;
-    bottom: auto !important; 
-    border-radius: 0 !important;
-    z-index: 1 !important;
-    box-shadow: none !important;
-    background: rgba(0,0,0,0.15) !important;
+    width: 100vw !important;
+    display: none !important; /* Hide old sticky completely */
   }
-  
-  .nav-cat-dropdown a {
-    padding-left: 30px !important;
-    font-size: 0.85rem !important;
-    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
-  }
+}
+
+/* --- Fullscreen Mobile Menu Overlay (Fahorro Style) --- */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #002171; 
+  z-index: 9999;
+  transform: translateX(-100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu-overlay.open {
+  transform: translateX(0);
+}
+
+.menu-overlay-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 15px;
+  background: #002171;
+}
+
+.menu-close-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.menu-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff;
+}
+
+.menu-tab {
+  padding: 16px 10px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border: none;
+  background: #fff;
+  color: #666;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+
+.menu-tab.active {
+  background: #002171;
+  color: #fff;
+}
+
+.menu-tab-content {
+  flex: 1;
+  display: none;
+  flex-direction: column;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.menu-tab-content.active {
+  display: flex;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.menu-list li a:active {
+  background: rgba(255,255,255,0.1);
+}
+
+.menu-chevron {
+  font-size: 1.6rem;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+body.menu-open {
+  overflow: hidden !important; 
 }
 
 /* SMARTPHONES: 480px and below */

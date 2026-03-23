@@ -21,7 +21,7 @@
     <meta name="description" content="Farmacias Madero | Tu salud es nuestra prioridad los 365 días del año en Tampico y Madero. Calidad, confianza y envíos a domicilio.">
     <meta name="keywords" content="farmacia, tampico, madero, medicamentos, equipo medico, salud, bienestar">
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <link rel="stylesheet" href="style.css?v=10">
+    <link rel="stylesheet" href="style.css?v=11">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -294,6 +294,42 @@
                     <a href="#" target="_blank" class="btn-premium" id="modalWaBtn" style="display:block;text-align:center;margin-top:1.5rem;">Pedir por WhatsApp</a>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Mobile Fullscreen Overlay Menu -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay" aria-hidden="true">
+        <div class="menu-overlay-header">
+            <!-- Pushed logic so close is on the right side if we want, or left like reference? Let's use right close -->
+            <button class="menu-close-btn" id="closeMobileMenu" aria-label="Cerrar menú">&times;</button>
+        </div>
+        <div class="menu-tabs">
+            <button class="menu-tab active" id="tabMenu">Menú</button>
+            <button class="menu-tab" id="tabCuenta">Mi cuenta</button>
+        </div>
+        
+        <div class="menu-tab-content active" id="contentMenu">
+            <ul class="menu-list">
+                <li><a href="#">Hidratación & Bebidas <span class="menu-chevron">&rsaquo;</span></a></li>
+                <li><a href="#">Óptica <span class="menu-chevron">&rsaquo;</span></a></li>
+                <li><a href="#">Equipo Médico & Ortopedia <span class="menu-chevron">&rsaquo;</span></a></li>
+                <li><a href="#">Cuidado de la Piel <span class="menu-chevron">&rsaquo;</span></a></li>
+                <li><a href="#">Bebés <span class="menu-chevron">&rsaquo;</span></a></li>
+                <li><a href="#">Vitaminas & Suplementos <span class="menu-chevron">&rsaquo;</span></a></li>
+                <li><a href="#">Higiene y Cuidado Personal <span class="menu-chevron">&rsaquo;</span></a></li>
+                <li><a href="#">Dermocosméticos <span class="menu-chevron">&rsaquo;</span></a></li>
+                <li><a href="#">Farmacia <span class="menu-chevron">&rsaquo;</span></a></li>
+                <li><a href="#">Bienestar Sexual <span class="menu-chevron">&rsaquo;</span></a></li>
+                <li><a href="#">Diabetes <span class="menu-chevron">&rsaquo;</span></a></li>
+            </ul>
+        </div>
+        
+        <div class="menu-tab-content" id="contentCuenta" style="display:none;">
+            <ul class="menu-list">
+                <li><a href="#" id="mobileLoginBtnOverlay">Iniciar Sesión / Registro <span class="menu-chevron">&rsaquo;</span></a></li>
+                <li><a href="#">Mis Pedidos <span class="menu-chevron">&rsaquo;</span></a></li>
+                <li><a href="#">Servicio al Cliente <span class="menu-chevron">&rsaquo;</span></a></li>
+            </ul>
         </div>
     </div>
 
