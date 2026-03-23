@@ -1801,6 +1801,24 @@ a:focus-visible {
   .product-card { padding: 10px !important; border-radius: 15px !important; background: #fff !important; }
   .product-card h3 { font-size: 0.85rem !important; height: 38px !important; }
   .product-card .price { font-size: 1.1rem !important; color: var(--primary) !important; }
+  /* Deal of the Day (Ofertas Imperdibles) Fixes */
+  .deal-content { flex-direction: column !important; }
+  .deal-product { flex-direction: column !important; text-align: center !important; }
+  .deal-promo-img { width: 100% !important; max-width: 300px !important; margin: 0 auto 15px !important; }
+  .deal-info { text-align: center !important; }
+
+  /* SAM Program Fixes */
+  .sam-program { flex-direction: column !important; text-align: center !important; padding: 20px 15px !important; }
+  .sam-content h2 { justify-content: center !important; }
+  .sam-img { max-width: 250px !important; margin-bottom: 20px !important; }
+
+  /* General Mobile Typography */
+  .section-title { font-size: 1.6rem !important; }
+  .deal-name { font-size: 1.4rem !important; }
+
+  /* Specificity for hiding action text */
+  #userName, .header-actions span { display: none !important; }
+
 
   /* Modal responsive */
   .modal-content {
