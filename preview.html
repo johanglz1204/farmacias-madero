@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmaLike Preview</title>
+    <style>
+        :root {
+          --primary: #1e5baa;
+          --accent: #dc2626;
+          --bg: #f3f4f6;
+          --text-main: #1f2937;
+          --white: #ffffff;
+          --transition: all 0.3s ease;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg); color: var(--text-main); }
+        header { background: var(--white); padding: 1rem 2rem; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .logo { display: flex; align-items: center; gap: 12px; font-size: 1.5rem; font-weight: 800; color: var(--primary); }
+        
+        .carousel-container { position: relative; padding: 2rem; }
+        .carousel-track {
+            display: flex; gap: 1.5rem; overflow-x: auto; scroll-behavior: smooth;
+            scrollbar-width: none; padding: 1rem 0;
+        }
+        .carousel-btn {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            width: 40px; height: 40px; border-radius: 50%; border: none;
+            background: white; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            cursor: pointer; z-index: 10; font-weight: bold; font-size: 1.2rem;
+            display: flex; align-items: center; justify-content: center; color: var(--primary);
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        .product-card {
+            min-width: 260px; background: white; border-radius: 12px; padding: 1.2rem;
+            position: relative; box-shadow: 0 2px 5px rgba(0,0,0,0.05); transition: var(--transition);
+        }
+        .product-card:hover { transform: translateY(-8px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border: 1px solid var(--primary); }
+        .promo { position: absolute; top: 10px; left: 10px; background: var(--accent); color: white; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; }
+        .img { height: 140px; background: #f9fafb; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 3rem; margin-bottom: 1rem;}
+        .price { font-size: 1.5rem; font-weight: 800; color: var(--primary); }
+        .btn-wa { display: block; width: 100%; padding: 0.8rem; background: var(--primary); color: white; text-align: center; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <svg width="40" height="40" viewBox="0 0 100 100"><circle cx="28" cy="35" r="10" fill="#1e5baa"/><circle cx="72" cy="35" r="10" fill="#dc2626"/><path d="M20 65 Q 50 90, 80 65" stroke="#dc2626" stroke-width="8" stroke-linecap="round" fill="none"/></svg>
+            <span>FarmaLike</span>
+        </div>
+    </header>
+    <div class="carousel-container">
+        <h2 style="margin-bottom: 1rem; color: var(--primary);">👍 Recomendaciones</h2>
+        <button class="carousel-btn prev" id="prev">❮</button>
+        <div class="carousel-track" id="track">
+            <div class="product-card"><div class="promo">25% DCTO</div><div class="img">🧴</div><div class="name">Canesten V</div><div class="price">$158.00</div><a href="#" class="btn-wa">Comprar</a></div>
+            <div class="product-card"><div class="promo">OFERTA</div><div class="img">💊</div><div class="name">Elevit</div><div class="price">$425.00</div><a href="#" class="btn-wa">Comprar</a></div>
+            <div class="product-card"><div class="promo">HOT</div><div class="img">🍼</div><div class="name">Leche Nido</div><div class="price">$480.00</div><a href="#" class="btn-wa">Comprar</a></div>
+            <div class="product-card"><div class="promo">30%</div><div class="img">🌡️</div><div class="name">Termómetro</div><div class="price">$320.00</div><a href="#" class="btn-wa">Comprar</a></div>
+            <div class="product-card"><div class="promo">NEW</div><div class="img">🧪</div><div class="name">Vitamina C</div><div class="price">$210.00</div><a href="#" class="btn-wa">Comprar</a></div>
+        </div>
+        <button class="carousel-btn next" id="next">❯</button>
+    </div>
+    <script>
+        const track = document.getElementById('track');
+        document.getElementById('next').onclick = () => track.scrollLeft += 300;
+        document.getElementById('prev').onclick = () => track.scrollLeft -= 300;
+    </script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Canesten V Crema 1%",
+    "brand": "Bayer",
+    "price": 205.00,
+    "oldPrice": 158.00,
+    "badge": "25% DCTO",
+    "icon": "🧴",
+    "meta": "20g de Crema Vaginal",
+    "category": "Bienestar Sexual"
+  },
+  {
+    "name": "Elevit Multivitamínico Para El Embarazo",
+    "brand": "Bayer",
+    "price": 510.00,
+    "oldPrice": 425.00,
+    "badge": "RECOMENDADO",
+    "icon": "💊",
+    "meta": "Caja Con 30 Comprimidos",
+    "category": "Cuidado & Prevención"
+  },
+  {
+    "name": "Abractil 20 mg 1 Laminilla",
+    "brand": "Farmalabor",
+    "price": 260.00,
+    "oldPrice": 195.00,
+    "badge": "PRECIO BAJO",
+    "icon": "📦",
+    "meta": "Tabletas Recubiertas",
+    "category": "Cuidado & Prevención"
+  },
+  {
+    "name": "Dicetel Duo 24 Tabs",
+    "brand": "Abbott",
+    "price": 652.00,
+    "oldPrice": 410.00,
+    "badge": "37% DCTO",
+    "icon": "🌡️",
+    "meta": "Caja con 24 Tabletas",
+    "category": "Cuidado & Prevención"
+  },
+  {
+    "name": "Aspirina 500 mg",
+    "brand": "Bayer",
+    "price": 85.00,
+    "oldPrice": null,
+    "badge": "POPULAR",
+    "icon": "💊",
+    "meta": "Caja Con 40 Tabletas",
+    "category": "Cuidado & Prevención"
+  },
+  {
+    "name": "Vick VapoRub Ungüento",
+    "brand": "Procter & Gamble",
+    "price": 99.00,
+    "oldPrice": 120.00,
+    "badge": "15% DCTO",
+    "icon": "🧴",
+    "meta": "Tarro de 50g",
+    "category": "Cuidado Personal"
+  },
+  {
+    "name": "Suero Electrolit Fresa Kiwi",
+    "brand": "Pisa",
+    "price": 28.00,
+    "oldPrice": null,
+    "badge": "REHIDRATANTE",
+    "icon": "💧",
+    "meta": "Botella 625 ml",
+    "category": "Cuidado & Prevención"
+  },
+  {
+    "name": "Paracetamol 500 mg",
+    "brand": "Primer Nivel",
+    "price": 15.00,
+    "oldPrice": 20.00,
+    "badge": "ECONÓMICO",
+    "icon": "💊",
+    "meta": "Genérico Caja con 10",
+    "category": "Cuidado & Prevención"
+  },
+  {
+    "name": "Johnson's Loción para Bebé",
+    "brand": "Johnson & Johnson",
+    "price": 125.00,
+    "oldPrice": null,
+    "badge": "BEBÉS",
+    "icon": "🍼",
+    "meta": "500 ml Fragancia Original",
+    "category": "Bebés"
+  },
+  {
+    "name": "Vichy Dercos Champú Anti-caspa",
+    "brand": "Vichy",
+    "price": 310.00,
+    "oldPrice": 370.00,
+    "badge": "16% DCTO",
+    "icon": "✨",
+    "meta": "Champú Medicado 200 ml",
+    "category": "Dermocosméticos"
+  },
+  {
+    "name": "Neutrogena Hydro Boost",
+    "brand": "Neutrogena",
+    "price": 420.00,
+    "oldPrice": null,
+    "badge": "NUEVO",
+    "icon": "💧",
+    "meta": "Gel-Crema Hidratante 50g",
+    "category": "Dermocosméticos"
+  },
+  {
+    "name": "Colgate Total 12",
+    "brand": "Colgate",
+    "price": 65.00,
+    "oldPrice": 80.00,
+    "badge": "19% DCTO",
+    "icon": "🦷",
+    "meta": "Pasta Dental 150 ml",
+    "category": "Cuidado Personal"
+  }
+]

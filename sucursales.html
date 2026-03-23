@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucursales | Farmacias Madero</title>
+    <meta name="description" content="Localiza tu sucursal de Farmacias Madero más cercana en Tampico y Ciudad Madero. Horarios actualizados y ubicaciones en mapa.">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css?v=6">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header role="banner">
+        <button class="hamburger" aria-label="Abrir menú" aria-controls="mobileNav" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="header-middle">
+            <a href="index.html" style="text-decoration: none;">
+                <div class="logo">
+                    <img src="assets/logo.png" alt="Farmacias Madero Logo" style="height: 55px; object-fit: contain;">
+                </div>
+            </a>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" id="branchSearchInput" placeholder="Busca tu sucursal más cercana...">
+            </div>
+            
+            <div class="header-actions">
+                <div id="authTrigger" class="header-action-btn">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+                    <span id="userName">Mi Cuenta</span>
+                    <span id="userPrefix" style="display:none"></span>
+                </div>
+            </div>
+        </div>
+        <nav class="header-bottom" role="navigation" aria-label="Menú principal">
+            <a href="index.html">Inicio</a>
+            <a href="sucursales.html" class="active">Nuestras Farmacias</a>
+            <!-- Categories mega-menu trigger -->
+            <div class="nav-cat-trigger" id="navCatTrigger" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-controls="navCatDropdown">
+                Categorías
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="white" style="margin-left:4px;vertical-align:middle;"><path d="M7 10l5 5 5-5z"/></svg>
+                <!-- Dropdown -->
+                <div class="nav-cat-dropdown" id="navCatDropdown" role="menu">
+                    <a role="menuitem" href="index.html#productos" data-cat="Hidratación &amp; Bebidas">Hidratación &amp; Bebidas <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="index.html#productos" data-cat="Óptica">Óptica <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="index.html#productos" data-cat="Equipo Médico &amp; Ortopedia">Equipo Médico &amp; Ortopedia <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="index.html#productos" data-cat="Cuidado de la Piel">Cuidado de la Piel <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="index.html#productos" data-cat="Bebés">Bebés <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="index.html#productos" data-cat="Vitaminas &amp; Suplementos">Vitaminas &amp; Suplementos <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="index.html#productos" data-cat="Higiene y Cuidado Personal">Higiene y Cuidado Personal <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="index.html#productos" data-cat="Dermocosméticos">Dermocosméticos <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="index.html#productos" data-cat="Farmacia">Farmacia <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="index.html#productos" data-cat="Bienestar Sexual">Bienestar Sexual <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="index.html#productos" data-cat="Diabetes">Diabetes <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="index.html#productos" data-cat="Cuidado &amp; Prevención">Cuidado &amp; Prevención <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="index.html#productos" data-cat="Conveniencia">Conveniencia <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="index.html#productos" data-cat="Electrónica">Electrónica <span>&rsaquo;</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="section-wrapper" style="padding-top: 10rem;">
+        <h2 class="section-title">📍 Nuestras Farmacias</h2>
+        <p style="text-align:center; color: var(--text-muted); margin-bottom: 3rem;">Encuentra el servicio de calidad en Farmacias Madero cerca de ti. 5 ubicaciones atendiendo tu salud.</p>
+        
+        <div class="sucursales-grid">
+            <!-- Branch 1: Madero -->
+            <div class="branch-card" data-map-query="Bolivia 202A, Felipe Carrillo Puerto, Ciudad Madero">
+                <div class="branch-badge">Abierto Ahora</div>
+                <h3 class="branch-name">Sucursal Madero</h3>
+                <p class="branch-info">Bolivia #202A, Col. Felipe Carrillo Puerto<br>Ciudad Madero, Tamaulipas</p>
+                <div class="branch-hours" style="margin: 1rem 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                    <span style="font-weight: 600; color: var(--text);">🕒 Lunes a Viernes:</span> 8:00 am - 9:45 pm<br>
+                    <span style="font-weight: 600; color: var(--text);">📅 Sábados y Domingos:</span> 8:00 am - 9:15 pm
+                </div>
+                <a href="https://maps.app.goo.gl/NcUrrt4amHMnHnUb6" target="_blank" class="btn-premium" style="width: 100%; text-decoration: none; display: block; text-align: center;">Ver en Mapa</a>
+            </div>
+            <!-- Branch 2: Ejército -->
+            <div class="branch-card" data-map-query="3a. Avenida 1435B, Loma del Gallo, Ciudad Madero">
+                <div class="branch-badge">Abierto Ahora</div>
+                <h3 class="branch-name">Sucursal Ejército</h3>
+                <p class="branch-info">3a. Avenida No. 1435B, Col. Loma del Gallo<br>Ciudad Madero, Tamaulipas</p>
+                <div class="branch-hours" style="margin: 1rem 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                    <span style="font-weight: 600; color: var(--text);">🕒 Lunes a Sábado:</span> 8:00 am - 9:00 pm<br>
+                    <span style="font-weight: 600; color: var(--text);">📅 Domingos:</span> 9:00 am - 7:00 pm
+                </div>
+                <a href="https://maps.app.goo.gl/s1zrZaTH5exAhLnF8" target="_blank" class="btn-premium" style="width: 100%; text-decoration: none; display: block; text-align: center;">Ver en Mapa</a>
+            </div>
+            <!-- Branch 3: Curva Texas -->
+            <div class="branch-card" data-map-query="Carr. Tampico-Mante 901, Nuevo Progreso, Tampico">
+                <div class="branch-badge">Abierto Ahora</div>
+                <h3 class="branch-name">Sucursal Curva Texas</h3>
+                <p class="branch-info">Carr. Tampico-Mante #901, Col. Nuevo Progreso<br>Tampico, Tamaulipas</p>
+                <div class="branch-hours" style="margin: 1rem 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                    <span style="font-weight: 600; color: var(--text);">🕒 Lunes a Viernes:</span> 8:00 am - 9:45 pm<br>
+                    <span style="font-weight: 600; color: var(--text);">📅 Sábados:</span> 8:00 am - 9:30 pm<br>
+                    <span style="font-weight: 600; color: var(--text);">📅 Domingos:</span> 9:00 am - 7:00 pm
+                </div>
+                <a href="https://maps.app.goo.gl/XSYhyC4MkinGG7Bc7" target="_blank" class="btn-premium" style="width: 100%; text-decoration: none; display: block; text-align: center;">Ver en Mapa</a>
+            </div>
+            <!-- Branch 4: Tampico Centro -->
+            <div class="branch-card" data-map-query="Altamira 209-B, Zona Centro, Tampico">
+                <div class="branch-badge">Abierto Ahora</div>
+                <h3 class="branch-name">Sucursal Tampico Centro</h3>
+                <p class="branch-info">Altamira #209-B, Col. Zona Centro<br>Tampico, Tamaulipas</p>
+                <div class="branch-hours" style="margin: 1rem 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                    <span style="font-weight: 600; color: var(--text);">🕒 Lunes a Viernes:</span> 8:30 am - 8:45 pm<br>
+                    <span style="font-weight: 600; color: var(--text);">📅 Sábados:</span> 8:30 am - 7:00 pm<br>
+                    <span style="font-weight: 600; color: var(--text);">📅 Domingos:</span> Cerrado
+                </div>
+                <a href="https://maps.app.goo.gl/XorFHBUZMoTXEdhZ7" target="_blank" class="btn-premium" style="width: 100%; text-decoration: none; display: block; text-align: center;">Ver en Mapa</a>
+            </div>
+            <!-- Branch 5: Hospital Civil -->
+            <div class="branch-card" data-map-query="Servando Canales 1903, Miguel Hidalgo, 89570 Ciudad Madero, Tamaulipas">
+                <div class="branch-badge">Abierto Ahora</div>
+                <h3 class="branch-name">Sucursal Hospital Civil</h3>
+                <p class="branch-info">Servando Canales No. 1903, Col. Miguel Hidalgo<br>C.P. 89570, Ciudad Madero</p>
+                <div class="branch-hours" style="margin: 1rem 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">
+                    <span style="font-weight: 600; color: var(--text);">🕒 Lunes a Sábado:</span> 8:00 am - 9:00 pm<br>
+                    <span style="font-weight: 600; color: var(--text);">📅 Domingos:</span> Cerrado
+                </div>
+                <a href="https://maps.app.goo.gl/JVzfKtxfTCFvN9TW7" target="_blank" class="btn-premium" style="width: 100%; text-decoration: none; display: block; text-align: center;">Ver en Mapa</a>
+            </div>
+        </div>
+
+        <div class="map-container" style="margin-top: 3rem; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <iframe id="branchMap" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Tampico,+Tamaulipas&t=&z=12&ie=UTF8&iwloc=&output=embed"></iframe>
+        </div>
+    </main>
+
+    <footer class="corporate-footer">
+        <div class="footer-grid">
+            <div class="footer-col brand-col">
+                <img src="assets/logo.png" alt="Farmacias Madero" class="footer-logo">
+                <p>Tu salud es nuestra prioridad los 365 días del año. Calidad y confianza en cada servicio.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FarmaciasMaderoOf" target="_blank" aria-label="Facebook"><svg width="24" height="24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg width="24" height="24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#productos">Productos</a></li>
+                    <li><a href="index.html#ofertasImperdibles">Ofertas</a></li>
+                    <li><a href="index.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nuestras Sucursales</h4>
+                <ul>
+                    <li><a href="sucursales.html">Madero Centro</a></li>
+                    <li><a href="sucursales.html">Hospital Civil</a></li>
+                    <li><a href="sucursales.html">Ejército</a></li>
+                    <li><a href="sucursales.html">Curva Texas</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Aceptamos</h4>
+                <div class="payment-methods">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+                </div>
+                <p style="margin-top:1rem; font-size:0.8rem; opacity:0.6;">© 2026 Farmacias Madero. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth Modal Overlay -->
+    <div class="modal-overlay" id="authModal">
+        <div class="auth-modal">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <div class="auth-tabs">
+                <div class="auth-tab active" id="tabLogin">Ingresar</div>
+                <div class="auth-tab" id="tabRegister">Registrarme</div>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+                <div class="form-group"><label>Correo</label><input type="email" required></div>
+                <div class="form-group"><label>Contraseña</label><input type="password" required></div>
+                <button type="submit" class="btn-premium" style="width: 100%; margin-top: 1rem;">Acceder</button>
+            </form>
+
+            <form id="registerForm" class="auth-form" style="display: none;">
+                <div class="form-group"><label>Nombre</label><input type="text" id="regName" required></div>
+                <div class="form-group"><label>Correo</label><input type="email" id="regEmail" required></div>
+                <button type="submit" class="btn-premium" style="width: 100%; margin-top: 1rem;">Crear Cuenta</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast-notification"></div>
+
+    <script>
+        // Common UI Logic
+        const authTrigger = document.getElementById('authTrigger');
+        const authModal = document.getElementById('authModal');
+        const closeModal = document.getElementById('closeModal');
+        const tabLogin = document.getElementById('tabLogin');
+        const tabRegister = document.getElementById('tabRegister');
+        const loginForm = document.getElementById('loginForm');
+        const registerForm = document.getElementById('registerForm');
+        const userNameDisplay = document.getElementById('userName');
+
+        // Categories Dropdown Logic
+        const navCatTrigger = document.getElementById('navCatTrigger');
+        const navCatDropdown = document.getElementById('navCatDropdown');
+
+        if(navCatTrigger && navCatDropdown) {
+            navCatTrigger.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = navCatDropdown.classList.contains('active');
+                navCatDropdown.classList.toggle('active', !isOpen);
+            });
+            document.addEventListener('click', () => { if(navCatDropdown) navCatDropdown.classList.remove('active'); });
+            
+            navCatDropdown.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    const cat = link.getAttribute('data-cat');
+                    localStorage.setItem('farma_start_cat', cat);
+                });
+            });
+        }
+
+        window.addEventListener('load', () => {
+            const savedUser = localStorage.getItem('farmalike_user');
+            if (savedUser) {
+                const user = JSON.parse(savedUser);
+                userNameDisplay.innerText = `Hola, ${user.name.split(' ')[0]}`;
+            }
+        });
+
+        authTrigger.addEventListener('click', () => authModal.classList.add('active'));
+        closeModal.addEventListener('click', () => authModal.classList.remove('active'));
+        authModal.addEventListener('click', (e) => { if(e.target === authModal) authModal.classList.remove('active'); });
+
+        tabLogin.addEventListener('click', () => {
+            tabLogin.classList.add('active'); tabRegister.classList.remove('active');
+            loginForm.style.display = 'block'; registerForm.style.display = 'none';
+        });
+        tabRegister.addEventListener('click', () => {
+            tabRegister.classList.add('active'); tabLogin.classList.remove('active');
+            registerForm.style.display = 'block'; loginForm.style.display = 'none';
+        });
+
+        // Interactive Map & Search Logic
+        const branchMap = document.getElementById('branchMap');
+        const branchCards = document.querySelectorAll('.branch-card');
+        const branchSearchInput = document.getElementById('branchSearchInput');
+
+        if(branchSearchInput) {
+            branchSearchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                branchCards.forEach(card => {
+                    const text = card.innerText.toLowerCase();
+                    card.style.display = text.includes(query) ? 'block' : 'none';
+                });
+            });
+        }
+
+        branchCards.forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON') return;
+                const address = card.getAttribute('data-map-query');
+                branchMap.src = `https://maps.google.com/maps?q=${encodeURIComponent(address)}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
+                branchCards.forEach(c => c.style.transform = 'scale(1)');
+                card.style.transform = 'scale(1.02)';
+                if(window.innerWidth < 768) branchMap.scrollIntoView({behavior: 'smooth'});
+            });
+        });
+
+        function updateBranchStatus() {
+            const now = new Date();
+            const day = now.getDay();
+            const timeNum = now.getHours() * 100 + now.getMinutes();
+            const schedules = {
+                'Sucursal Madero': {1:[800,2145],2:[800,2145],3:[800,2145],4:[800,2145],5:[800,2145],6:[800,2115],0:[800,2115]},
+                'Sucursal Ejército': {1:[800,2100],2:[800,2100],3:[800,2100],4:[800,2100],5:[800,2100],6:[800,2100],0:[900,1900]},
+                'Sucursal Curva Texas': {1:[800,2145],2:[800,2145],3:[800,2145],4:[800,2145],5:[800,2145],6:[800,2130],0:[900,1900]},
+                'Sucursal Tampico Centro': {1:[830,2045],2:[830,2045],3:[830,2045],4:[830,2045],5:[830,2045],6:[830,1900],0:null},
+                'Sucursal Hospital Civil': {1:[800,2100],2:[800,2100],3:[800,2100],4:[800,2100],5:[800,2100],6:[800,2100],0:null}
+            };
+            document.querySelectorAll('.branch-card').forEach(card => {
+                const name = card.querySelector('.branch-name').innerText;
+                const badge = card.querySelector('.branch-badge');
+                let isOpen = schedules[name] && schedules[name][day] && timeNum >= schedules[name][day][0] && timeNum <= schedules[name][day][1];
+                badge.innerText = isOpen ? 'Abierto Ahora' : 'Cerrado Ahora';
+                badge.style.background = isOpen ? '#dcfce7' : '#fee2e2';
+                badge.style.color = isOpen ? '#166534' : '#991b1b';
+            });
+        }
+        updateBranchStatus();
+        setInterval(updateBranchStatus, 60000);
+    </script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacias Madero – Promociones y Productos</title>
+    <meta name="description" content="Descubre las mejores promociones semanales, productos de salud y bienestar en Farmacias Madero. Compra online y visita nuestras sucursales.">
+    <meta property="og:title" content="Farmacias Madero – Promociones y Productos">
+    <meta property="og:description" content="Promociones semanales y productos de alta calidad en Farmacias Madero.">
+    <meta property="og:image" content="assets/promo1.jpg">
+    <meta property="og:url" content="https://farmaciasmadero.com">
+    <meta property="og:type" content="website">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXX');
+    </script>
+    <title>Farmacias Madero – Lo mejor para tu salud</title>
+    <meta name="description" content="Farmacias Madero | Tu salud es nuestra prioridad los 365 días del año en Tampico y Madero. Calidad, confianza y envíos a domicilio.">
+    <meta name="keywords" content="farmacia, tampico, madero, medicamentos, equipo medico, salud, bienestar">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css?v=6">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header role="banner">
+        <button class="hamburger" aria-label="Abrir menú" aria-controls="mobileNav" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="header-middle">
+            <a href="index.html" style="text-decoration: none;">
+                <div class="logo">
+                    <img src="assets/logo.png" alt="Farmacias Madero Logo" style="height: 55px; object-fit: contain;">
+                </div>
+            </a>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" id="searchInput" placeholder="¿Qué estás buscando?">
+                <div id="searchSuggestions" class="search-suggestions"></div>
+            </div>
+            
+            <div class="header-actions">
+                <div id="authTrigger" class="header-action-btn">
+                    <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+                    <span id="userName">Mi Cuenta</span>
+                    <span id="userPrefix" style="display:none"></span>
+                </div>
+            </div>
+        </div>
+        <nav class="header-bottom" role="navigation" aria-label="Menú principal">
+            <a href="index.html">Inicio</a>
+            <a href="sucursales.html">Nuestras Farmacias</a>
+            <!-- Categories mega-menu trigger -->
+            <div class="nav-cat-trigger" id="navCatTrigger" tabindex="0" aria-haspopup="true" aria-expanded="false" aria-controls="navCatDropdown">
+                Categorías
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="white" style="margin-left:4px;vertical-align:middle;"><path d="M7 10l5 5 5-5z"/></svg>
+                <!-- Dropdown -->
+                <div class="nav-cat-dropdown" id="navCatDropdown" role="menu">
+                    <a role="menuitem" href="#" data-cat="Hidratación &amp; Bebidas">Hidratación &amp; Bebidas <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="#" data-cat="Óptica">Óptica <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="#" data-cat="Equipo Médico &amp; Ortopedia">Equipo Médico &amp; Ortopedia <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="#" data-cat="Cuidado de la Piel">Cuidado de la Piel <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="#" data-cat="Bebés">Bebés <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="#" data-cat="Vitaminas &amp; Suplementos">Vitaminas &amp; Suplementos <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="#" data-cat="Higiene y Cuidado Personal">Higiene y Cuidado Personal <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="#" data-cat="Dermocosméticos">Dermocosméticos <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="#" data-cat="Farmacia">Farmacia <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="#" data-cat="Bienestar Sexual">Bienestar Sexual <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="#" data-cat="Diabetes">Diabetes <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="#" data-cat="Cuidado &amp; Prevención">Cuidado &amp; Prevención <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="#" data-cat="Conveniencia">Conveniencia <span>&rsaquo;</span></a>
+                    <a role="menuitem" href="#" data-cat="Electrónica">Electrónica <span>&rsaquo;</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <nav class="category-strip" id="categoryStrip">
+        <!-- Rendered by JS -->
+    </nav>
+
+    <section class="promo-slider-container">
+        <button class="slider-btn prev" id="sliderPrev" aria-label="Anterior" aria-controls="promoSlider">
+            <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+        </button>
+        <button class="slider-btn next" id="sliderNext" aria-label="Siguiente" aria-controls="promoSlider">
+            <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+        </button>
+
+        <div class="promo-slides-wrapper" id="promoSlider">
+            <!-- Slide 1: Promo Hospitalaria (Imagen Proporcionada) -->
+            <div class="promo-slide" style="background-image: url('assets/banner1_user.png');">
+                <!-- Se eliminó el contenido HTML redundante para usar directamente la imagen proporcionada -->
+            </div>
+            
+            <!-- Slide 2: Salud al momento (Imagen Proporcionada) -->
+            <div class="promo-slide" style="background-image: url('assets/banner2_user.png');">
+                <!-- Se eliminó el contenido HTML redundante para usar directamente la imagen proporcionada -->
+            </div>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="slider-dots-container" id="sliderDots">
+            <!-- Dynamic Dots -->
+        </div>
+    </section>
+
+    <section class="section-wrapper recom-section" style="position: relative;" aria-labelledby="recomTitle">
+        <h2 class="section-title" id="recomTitle">Recomendaciones de la Semana</h2>
+        <div class="product-slider-wrapper" style="position: relative; padding: 0 1rem;" role="region" aria-roledescription="carousel" aria-label="Recomendaciones de productos">
+            <button class="slider-btn prev" id="recomPrev" aria-label="Anterior" aria-controls="recomGrid" style="left: -1.5rem; box-shadow: var(--shadow-strong); z-index: 10;">
+                <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1-41z"/></svg>
+            </button>
+            <div class="product-carousel" id="recomGrid">
+                <!-- Dynamic products -->
+            </div>
+            <button class="slider-btn next" id="recomNext" style="right: -1.5rem; box-shadow: var(--shadow-strong); z-index: 10;">
+                <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"/></svg>
+            </button>
+        </div>
+    </section>
+
+    <!-- OFERTAS IMPERDIBLES -->
+    <section class="deal-of-day-section animate-on-scroll" id="ofertasImperdibles">
+        <div class="deal-label">🔥 OFERTAS IMPERDIBLES</div>
+        <div class="deal-content">
+            <div class="deal-product">
+                <img src="assets/cama_promo_card.png" alt="Promoción Cama Manual de Lujo" class="deal-promo-img">
+                <div class="deal-info">
+                    <div class="deal-brand">Farmacias Madero &mdash; Equipo Médico</div>
+                    <div class="deal-name">Cama Manual de Lujo &mdash; Hospitalaria</div>
+                    <div class="deal-prices">
+                        <span class="deal-old-price">Antes $8,900 MXN</span>
+                        <span class="deal-price">$6,900 MXN</span>
+                        <span class="deal-savings">Ahorras $2,000</span>
+                    </div>
+                    <div class="deal-includes">
+                        <span>✅ Colchón Básico</span>
+                        <span>✅ Porta Sueros</span>
+                        <span>✅ Mesa de Apoyo</span>
+                    </div>
+                    <a href="https://wa.me/5218332996555?text=Hola,%20quisiera%20informaci%C3%B3n%20sobre%20la%20Cama%20Manual%20de%20Lujo%20en%20oferta%20a%20%246%2C900" target="_blank" class="btn-deal">Consultar por WhatsApp</a>
+                </div>
+            </div>
+            <div class="deal-badge-promo">
+                <div class="promo-badge-icon">🏷️</div>
+                <div class="promo-badge-text">Disponible por<br><strong>tiempo limitado</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAM - Salud Al Momento Section -->
+    <section class="sam-program">
+        <img src="assets/sam.png" alt="Mascota SAM" class="sam-img">
+        <div class="sam-content">
+            <h2 style="display: flex; align-items: center; gap: 10px;">
+                <span style="background: var(--accent); color: white; padding: 4px 12px; border-radius: 8px; font-size: 0.9rem;">PROGRAMA OFICIAL</span>
+                Salud Al Momento (SAM)
+            </h2>
+            <p>Únete a nuestro programa exclusivo donde te ofrecemos <strong>envío gratis</strong> en todos tus medicamentos y un <strong>seguimiento personalizado</strong> mes tras mes para que nunca te falte nada.</p>
+            <a href="https://wa.me/5218332996555" target="_blank" class="btn-sam">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                Consultar programa SAM
+            </a>
+        </div>
+    </section>
+
+    <div class="trust-bar" style="display: flex; justify-content: space-around; padding: 5rem 5%; background: white; border-top: 1px solid var(--border);">
+        <div style="text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🛵</div>
+            <h4 style="font-weight: 900; text-transform: uppercase; font-size: 0.8rem;">Envío Express</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem;">En 60 minutos en tu puerta.</p>
+        </div>
+        <div style="text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
+            <h4 style="font-weight: 900; text-transform: uppercase; font-size: 0.8rem;">Calidad Garantizada</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem;">Productos 100% certificados.</p>
+        </div>
+        <div style="text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🩺</div>
+            <h4 style="font-weight: 900; text-transform: uppercase; font-size: 0.8rem;">Orientación Médica</h4>
+            <p style="color: var(--text-muted); font-size: 0.85rem;">Personal altamente capacitado.</p>
+        </div>
+    </div>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section class="contact-section animate-on-scroll" id="contacto">
+        <h2 class="section-title" style="margin-bottom:1.5rem;">¿Tienes alguna pregunta?</h2>
+        <p style="text-align:center; color:var(--text-muted); margin-bottom:2rem;">Llena el formulario y te contactaremos por WhatsApp de inmediato.</p>
+        <form class="contact-form" id="contactForm">
+            <div class="contact-form-row">
+                <div class="form-group">
+                    <label for="cName">Nombre</label>
+                    <input type="text" id="cName" placeholder="Tu nombre completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="cPhone">Teléfono</label>
+                    <input type="tel" id="cPhone" placeholder="Tu número de WhatsApp" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="cCategory">Categoría</label>
+                <select id="cCategory">
+                    <option value="General">Consulta General</option>
+                    <option value="Medicamentos">Medicamentos</option>
+                    <option value="Bebés">Productos para Bebés</option>
+                    <option value="Dermocosméticos">Dermocosméticos</option>
+                    <option value="Cuidado Personal">Cuidado Personal</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cMessage">Mensaje</label>
+                <textarea id="cMessage" rows="4" placeholder="Escribe tu consulta aquí..." required></textarea>
+            </div>
+            <button type="submit" class="btn-contact-submit">Enviar por WhatsApp ✅</button>
+        </form>
+    </section>
+
+    <footer class="corporate-footer">
+        <div class="footer-grid">
+            <div class="footer-col brand-col">
+                <img src="assets/logo.png" alt="Farmacias Madero" class="footer-logo">
+                <p>Tu salud es nuestra prioridad los 365 días del año. Calidad y confianza en cada servicio.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/FarmaciasMaderoOf" target="_blank" aria-label="Facebook"><svg width="24" height="24" fill="white"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                    <a href="#" aria-label="Instagram"><svg width="24" height="24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.209-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#ofertasImperdibles">Ofertas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Nuestras Sucursales</h4>
+                <ul>
+                    <li><a href="sucursales.html">Madero Centro</a></li>
+                    <li><a href="sucursales.html">Hospital Civil</a></li>
+                    <li><a href="sucursales.html">Ejército</a></li>
+                    <li><a href="sucursales.html">Curva Texas</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Aceptamos</h4>
+                <div class="payment-methods">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+                </div>
+                <p style="margin-top:1rem; font-size:0.8rem; opacity:0.6;">© 2026 Farmacias Madero. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5218332996555" target="_blank" class="wa-float" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+    </a>
+
+    <!-- Product Detail Modal -->
+    <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalProductName">
+        <div class="product-modal-inner">
+            <button class="modal-close" id="closeProductModal" aria-label="Cerrar">&times;</button>
+            <div class="modal-layout">
+                <div class="modal-img-side">
+                    <div id="modalImageContainer" class="modal-img-placeholder"></div>
+                    <div class="modal-product-icon" id="modalIcon"></div>
+                </div>
+                <div class="modal-info-side">
+                    <div class="modal-badge" id="modalBadge"></div>
+                    <div class="modal-brand" id="modalBrand"></div>
+                    <h3 class="modal-product-name" id="modalProductName"></h3>
+                    <div class="modal-meta" id="modalMeta"></div>
+                    <div class="modal-price-row">
+                        <span class="modal-old-price" id="modalOldPrice"></span>
+                        <span class="modal-price" id="modalPrice"></span>
+                    </div>
+                    
+                    <div class="quantity-selector">
+                        <label>Cantidad:</label>
+                        <div class="qty-controls">
+                            <button id="qtyMinus">-</button>
+                            <input type="number" id="qtyInput" value="1" min="1" max="99">
+                            <button id="qtyPlus">+</button>
+                        </div>
+                    </div>
+
+                    <a href="#" target="_blank" class="btn-premium" id="modalWaBtn" style="display:block;text-align:center;margin-top:1.5rem;">Pedir por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-notification"></div>
+
+    <!-- Auth Modal Overlay -->
+    <div class="modal-overlay" id="authModal">
+        <div class="auth-modal">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <div class="auth-tabs">
+                <div class="auth-tab active" id="tabLogin">Ingresar</div>
+                <div class="auth-tab" id="tabRegister">Registrarme</div>
+            </div>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" placeholder="ejemplo@farmalike.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Contraseña</label>
+                    <input type="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-premium" style="width: 100%; margin-top: 1rem;">Acceder a mi Cuenta</button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="registerForm" class="auth-form" style="display: none;">
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" id="regName" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                    <label>Número de Teléfono</label>
+                    <input type="tel" id="regPhone" required>
+                </div>
+                <div class="form-group">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem;">
+                        <label style="margin-bottom: 0;">Contraseña</label>
+                        <div class="password-requirements">
+                            <span class="requirement-item" id="reqLength">6-15 caracteres</span>
+                            <span class="requirement-item" id="reqLetter">Al menos una letra</span>
+                            <span class="requirement-item" id="reqNumber">1 número</span>
+                        </div>
+                    </div>
+                    <div class="password-container">
+                        <input type="password" id="regPass" placeholder="8-15 caracteres" required style="padding-right: 3rem;">
+                        <span class="password-toggle" id="togglePass">👁️‍🗨️</span>
+                    </div>
+                </div>
+                <button type="submit" class="btn-premium" style="width: 100%; margin-top: 1rem;">Crear mi Usuario</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js?v=2"></script>
+</body>
+</html>
