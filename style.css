@@ -1848,8 +1848,10 @@ a:focus-visible {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100vh; /* Fallback */
+  height: -webkit-fill-available; /* iOS fix */
+  height: 100dvh; /* Modern dynamic viewport */
   background: #002171; 
   z-index: 9999;
   transform: translateX(-100%);
@@ -1906,6 +1908,7 @@ a:focus-visible {
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  padding-bottom: 40px; /* Safe area for bottom notches/bars */
 }
 
 .menu-tab-content.active {

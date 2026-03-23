@@ -1,3 +1,9 @@
+// Force scroll to top on load (Prevents scroll-restoration jumping to bottom)
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 // ==========================================
 // CATEGORIES DATA
 // ==========================================
