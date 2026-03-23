@@ -1837,13 +1837,28 @@ a:focus-visible {
   .section-wrapper { padding-top: 10.5rem !important; } /* Adjust for taller stacked header */
   
 
+  /* Mobile Menu Fixes */
+  .header-bottom {
+    max-height: calc(100vh - 120px) !important; 
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
   .nav-cat-dropdown {
-    width: 100vw !important;
-    position: fixed !important;
-    top: auto !important;
-    bottom: 0px !important; 
+    width: 100% !important;
+    position: relative !important;
+    top: 0 !important;
+    bottom: auto !important; 
     border-radius: 0 !important;
-    z-index: 2000 !important;
+    z-index: 1 !important;
+    box-shadow: none !important;
+    background: rgba(0,0,0,0.15) !important;
+  }
+  
+  .nav-cat-dropdown a {
+    padding-left: 30px !important;
+    font-size: 0.85rem !important;
+    border-bottom: 1px solid rgba(255,255,255,0.05) !important;
   }
 }
 
