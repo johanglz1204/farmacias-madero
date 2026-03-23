@@ -533,11 +533,19 @@ a:focus-visible {
   justify-content: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   transition: var(--transition);
+  opacity: 0;
+  visibility: hidden;
 }
 
 .slider-btn:hover {
   background: white;
   transform: translateY(-50%) scale(1.1);
+}
+
+.promo-slider-container:hover .slider-btn,
+.product-slider-wrapper:hover .slider-btn {
+  opacity: 1;
+  visibility: visible;
 }
 
 .slider-btn.prev {
