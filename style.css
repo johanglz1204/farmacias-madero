@@ -532,9 +532,10 @@ a:focus-visible {
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: var(--transition);
-  opacity: 0;
-  visibility: hidden;
+  transition: all 0.3s ease !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
 
 .slider-btn:hover {
@@ -544,8 +545,9 @@ a:focus-visible {
 
 .promo-slider-container:hover .slider-btn,
 .product-slider-wrapper:hover .slider-btn {
-  opacity: 1;
-  visibility: visible;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 .slider-btn.prev {
